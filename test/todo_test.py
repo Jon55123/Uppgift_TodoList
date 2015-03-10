@@ -23,12 +23,12 @@ class TestCase(unittest.TestCase):
         return json.loads(response.data), response.status_code
 
     def delete_todo(self,todo):
-        response = self.app.delete('/todos/%s' % todo)
+        response = self.app.delete('/todo/%s' % todo)
 
         return response.status_code
 
     def get_todo(self,todo):
-        response = self.app.get('/todos/%s' % todo)
+        response = self.app.get('/todo/%s' % todo)
 
         return json.loads(response.data), response.status_code
 
